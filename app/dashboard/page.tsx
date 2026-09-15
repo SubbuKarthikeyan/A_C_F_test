@@ -1,14 +1,14 @@
 import { DashboardMain } from "@/components/layout/dashboard-main";
+import { DashboardView } from "@/components/dashboard/dashboard-view";
 
 export default function DashboardPage() {
   return (
     <DashboardMain
       title="Dashboard"
-      description="Welcome to Customer Feedback Intelligence."
+      description="Overview of customer feedback metrics and insights."
     >
-      <div className="rounded-lg border border-slate-800 bg-slate-900/60 p-6 text-sm text-slate-400">
-        Dashboard analytics and summary metrics will be added in later phases.
-      </div>
+      <DashboardView />
     </DashboardMain>
   );
 }
+
