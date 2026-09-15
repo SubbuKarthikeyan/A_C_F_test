@@ -13,7 +13,7 @@ export function DashboardMain({ title, description, children }: DashboardMainPro
           <p className="text-sm text-slate-400">{description}</p>
         )}
       </div>
-      {children && <div className="space-y-4">{children}</div>}
+      {children && <div className="space-y-6">{children}</div>}
     </div>
   );
 }

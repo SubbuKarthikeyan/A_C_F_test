@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import type { Feedback } from "@/types/feedback";
 
 export interface RecentFeedbackProps {
@@ -57,9 +58,10 @@ export function RecentFeedback({ feedback }: RecentFeedbackProps) {
       ) : (
         <div className="divide-y divide-slate-800/80">
           {feedback.map((item) => (
-            <div
+            <Link
               key={item.id}
-              className="flex flex-col justify-between gap-1 py-3 first:pt-0 last:pb-0 sm:flex-row sm:items-center"
+              href={`/dashboard/feedback/${item.id}`}
+              className="flex flex-col justify-between gap-1 py-3 first:pt-0 last:pb-0 sm:flex-row sm:items-center rounded-lg px-2 -mx-2 transition-colors hover:bg-slate-800/50"
             >
               <div className="min-w-0 pr-2">
                 <p className="truncate text-xs font-semibold text-slate-200">
@@ -86,7 +88,7 @@ export function RecentFeedback({ feedback }: RecentFeedbackProps) {
                   {item.sentiment}
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}
