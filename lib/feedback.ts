@@ -168,6 +168,7 @@ function persistFeedback(feedbackList: Feedback[]): void {
       FEEDBACK_STORAGE_KEY,
       JSON.stringify(feedbackList)
     );
+    window.dispatchEvent(new Event("feedback-updated"));
   } catch (error) {
     console.error("Failed to persist feedback to localStorage:", error);
   }
