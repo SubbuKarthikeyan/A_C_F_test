@@ -1,13 +1,13 @@
 import { DashboardMain } from "@/components/layout/dashboard-main";
 
-export default function DashboardPage() {
+export default function CollectPage() {
   return (
     <DashboardMain
-      title="Dashboard"
-      description="Welcome to Customer Feedback Intelligence."
+      title="Collect Feedback"
+      description="Submit and ingest new feedback items."
     >
       <div className="rounded-lg border border-slate-800 bg-slate-900/60 p-6 text-sm text-slate-400">
-        Dashboard analytics and summary metrics will be added in later phases.
+        The feedback submission and ingestion form will be implemented in a later phase.
       </div>
     </DashboardMain>
   );
