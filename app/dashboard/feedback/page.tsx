@@ -1,4 +1,5 @@
 import { DashboardMain } from "@/components/layout/dashboard-main";
+import { FeedbackManagementView } from "@/components/feedback/feedback-management-view";
 
 interface FeedbackPageProps {
   searchParams: Promise<{
@@ -12,16 +13,12 @@ export default async function FeedbackPage({ searchParams }: FeedbackPageProps) 
   return (
     <DashboardMain
       title="Feedback Management"
-      description="View, filter, and triage customer feedback."
+      description="View, search, filter, and triage customer feedback records."
     >
-      <div className="rounded-lg border border-slate-800 bg-slate-900/60 p-6 text-sm text-slate-400 space-y-2">
-        <p>This section will be implemented in a later phase.</p>
-        {category && (
-          <p className="text-xs font-mono text-slate-300">
-            Current filter: <span className="text-blue-400 font-semibold">{category}</span>
-          </p>
-        )}
-      </div>
+      <FeedbackManagementView
+        key={category ?? "all"}
+        initialCategory={category}
+      />
     </DashboardMain>
   );
 }
